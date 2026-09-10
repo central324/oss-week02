@@ -1,6 +1,6 @@
 # oss-week02 — Node, JavaScript, npm
 
-박현수
+### 박현수
 Week 2 hands-on for *Open Source Software Design and Lab* (Kwangwoon Univ., 2026).
 
 Replace this first line with your name and student ID, commit, push. That is P0.
