@@ -28,6 +28,8 @@
 import readline from "node:readline";
 
 // TODO: import Inko from "inko" and create an instance
+import Inko from "inko";
+const inko = new Inko();
 
 const reverse = process.argv.includes("--reverse");
 const lines = [];
@@ -48,6 +50,12 @@ rl.on("line", (line) => {
 });
 
 rl.on("close", () => {
+  lines
+    .filter(line => line.trim() !== "")
+    .map(line => reverse ? inko.ko2en(line) : inko.en2ko(line))
+    .forEach((converted, index) => {
+      console.log(`${index + 1}.${converted}`);
+    });
   // TODO
   // Drop empty lines, convert each line with inko, and print them numbered:
   //   1. 오픈 소스
